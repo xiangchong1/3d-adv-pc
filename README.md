@@ -20,7 +20,7 @@ There are four Python scripts in the root directorty for different attacks:
 The code logics of these four scripts are similar; they attack the victim objects into the specified target class.
 The basic usage is `python perturbation.py --target=5`. 
 
-Other parameters can be founded in the script, or run `python perturbation -h`. The default parameters are the ones used in the paper.
+Other parameters can be founded in the script, or run `python perturbation.py -h`. The default parameters are the ones used in the paper.
 
 
 
