@@ -25,7 +25,7 @@ Other parameters can be founded in the script, or run `python perturbation -h`. 
 
 
 ## Other files
-- log/model.ckpt -- the victim model used in the paper
+- log/model.ckpt -- the victim model used in the paper. Download [link](https://drive.google.com/open?id=1T99mJfyuxFCcMQuvw71jgn6_FlUEOj08). 
 - data/attacked_data.z -- the victim data used in the paper. It can be loaded with `joblib.load`, resulting in a Python list whose element is a numpy array (shape: 25\*1024\*3; 25 objects of the same class, each object is represented by 1024 points)
 - **gen_initial.py** -- used to generate initial points for adversarial cluster/object. The script uses DBSCAN to cluster the generated critical points.
 - critical -- the default directory to dump the generated initial points
