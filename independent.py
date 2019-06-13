@@ -125,15 +125,15 @@ def attack():
         print('model restored!')
 
         dist_list=[]  
-        for k in [5,35,33,22,37,2,4,0,30,8]:
-            if k == TARGET:
+        for victim in [5,35,33,22,37,2,4,0,30,8]:#the class index of selected 10 largest classed in ModelNet40
+            if victim == TARGET:
                 continue
-            attacked_data=attacked_data_all[k]#attacked_data shape:25*1024*3
+            attacked_data=attacked_data_all[victim]#attacked_data shape:25*1024*3
             for j in range(25//BATCH_SIZE):
                 dist,img=attack_one_batch(sess,ops,attacked_data[j*BATCH_SIZE:(j+1)*BATCH_SIZE])
                 dist_list.append(dist)
-                np.save(os.path.join('.',DUMP_DIR,'{}_{}_{}_adv.npy' .format(k,TARGET,j)),img)
-                #np.save(os.path.join('.',DUMP_DIR,'{}_{}_{}_orig.npy' .format(k,TARGET,j)),attacked_data[j*BATCH_SIZE:(j+1)*BATCH_SIZE])#dump originial example for comparison
+                np.save(os.path.join('.',DUMP_DIR,'{}_{}_{}_adv.npy' .format(victim,TARGET,j)),img)
+                #np.save(os.path.join('.',DUMP_DIR,'{}_{}_{}_orig.npy' .format(victim,TARGET,j)),attacked_data[j*BATCH_SIZE:(j+1)*BATCH_SIZE])#dump originial example for comparison
         #joblib.dump(dist_list,os.path.join('.',DUMP_DIR,'dist_{}.z' .format(TARGET)))#log distance information for performation evaluation
 def attack_one_batch(sess,ops,attacked_data):
 
