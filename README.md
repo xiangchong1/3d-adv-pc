@@ -3,7 +3,7 @@ By [Chong Xiang](https://nsec.sjtu.edu.cn/~chongxiang/), [Charles R. Qi](http://
 
 Sample code for CVPR 2019 paper "Generating 3D Adversarial Point Clouds" [arXiv](https://arxiv.org/abs/1809.07016)
 
-<img src="https://github.com/xiangchong1/test/blob/master/doc/attack_pipeline.png" width="50%" alt="attack pipeline" align=center>
+<img src="https://github.com/xiangchong1/3d-adv-pc/blob/master/doc/attack_pipeline.png" width="50%" alt="attack pipeline" align=center>
 
 ## Requirement
 This code is tested with Python 2.7 and Tensorflow 1.10.0
